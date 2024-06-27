@@ -1,0 +1,28 @@
+@keyframes liquid {
+  0% {
+    border-radius: 0% 40% 30% 60%/0% 30% 70% 40%;
+    background-size: 100%;
+  }
+  50% {
+    border-radius: 0% 0% 60% 40%/0% 60% 30% 40%;
+    background-size: 300%;
+  }
+  100% {
+    border-radius: 0% 40% 30% 60%/0% 30% 70% 40%;
+    background-size: 100%;
+  }
+}
+@keyframes liquidButton {
+  0% {
+    border-radius: 30% 40% 30% 60%/80% 30% 70% 40%;
+    background-size: 100%;
+  }
+  50% {
+    border-radius: 50% 30% 60% 40%/30% 60% 30% 40%;
+    background-size: 300%;
+  }
+  100% {
+    border-radius: 30% 40% 30% 60%/80% 30% 70% 40%;
+    background-size: 100%;
+  }
+}/*# sourceMappingURL=animations.css.map */

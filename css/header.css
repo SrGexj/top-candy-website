@@ -1,0 +1,35 @@
+.Header {
+  width: 100%;
+  max-height: 150px;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  padding: 30px 50px;
+  transition: all 0.5s;
+  top: 0;
+}
+.Header--menuOpen {
+  top: -50%;
+}
+.Header-logoImage {
+  width: 120px;
+  height: 120px;
+}
+.Header-menuButton, .Header-langSel {
+  border-radius: 10px;
+  background: linear-gradient(180deg, #27c4ef, #2077bd);
+  padding: 10px 35px;
+}
+.Header-menuText, .Header-lang, .Header-langIcon {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #fefefe;
+}
+.Header-langSel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=header.css.map */

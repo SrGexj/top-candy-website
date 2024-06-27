@@ -1,0 +1,76 @@
+
+.Footer{
+    width: 100%;
+    background: #f4f9ee;
+    color: #009bc9;
+    padding: 75px 100px 35px 100px;
+    &-text{
+        font-size: 20px;
+    }
+    &-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    &-col{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 70px;
+    }
+    &-companyInfo{
+        font-weight: 500;
+        font-size: 20px;
+        max-width: 40%;
+    }
+    &-linksWrapper{
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+    }
+    &-logoImage{
+        max-width: 200px;
+        object-fit: cover;
+    }
+    &-menuList{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    &-menuTitle{
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-bottom: 5px;
+        &--blue{
+            color: #009bc9;
+        }
+        &--yellow{
+            color: #e2bd0e;
+        }
+        &--pink{
+            color: #f05ea0;
+        }
+        &--orange{
+            color: #ed8229;
+        }
+        &--purple{
+            color: #4a23ca;
+        }
+    }
+    &-menuLink{
+        font-size: 18px;
+        font-family: var(--text-font);
+        text-transform: capitalize;
+        font-weight: 600;
+        color: #009bc9;
+        text-decoration: none;
+        max-width: 30%;
+        transition: color .25s;
+        &:hover{
+            color: #00607e;
+        }
+    }
+}

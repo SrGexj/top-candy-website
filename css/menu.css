@@ -1,0 +1,164 @@
+.Menu {
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #ef7cf3, #feacff);
+  background-size: cover;
+  border-radius: 0% 40% 30% 60%/60% 30% 70% 40%;
+  animation: liquid 2s infinite;
+  transition: all 1s cubic-bezier(0.78, 0.01, 0.25, 0.99);
+  z-index: 2;
+  overflow: hidden;
+}
+.Menu::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 90%;
+  height: 90%;
+  background: linear-gradient(90deg, #b8d4f2, #83d1ff);
+  background-size: cover;
+  border-radius: 0% 40% 30% 60%/60% 30% 70% 40%;
+  animation: liquid 3s infinite;
+  transition: all 4s;
+  z-index: -1;
+}
+.Menu--open {
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+}
+.Menu--open::before {
+  top: 0;
+  left: 0;
+}
+.Menu-closeButton {
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  top: 3.125rem;
+  left: 3.125rem;
+  border-radius: 10% 40% 30% 60%/80% 30% 70% 40%;
+  background: rgb(247, 201, 255);
+  background: linear-gradient(rgb(232, 144, 248) 0%, rgb(248, 100, 241) 100%);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  animation: liquidButton 3s infinite;
+  font-weight: 900;
+  color: #fefefe;
+}
+.Menu-lang {
+  display: none;
+}
+.Menu-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 7.8125rem 5rem;
+}
+.Menu-nav {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #f05ea0;
+}
+.Menu-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.Menu-item {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.Menu-link {
+  font-size: 4.0625rem;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+  color: #ffe1ee;
+  text-shadow: -0.0625rem 0.0625rem 0rem #ff8ec1, -0.125rem 0.125rem 0rem #ff8ec1, -0.1875rem 0.1875rem 0rem #ff8ec1, -0.25rem 0.25rem 0rem #ff8ec1, -0.3125rem 0.3125rem 0rem #ff8ec1;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.Menu-link:hover {
+  color: #ff81b9;
+  text-shadow: -0.0625rem 0.0625rem 0rem #b94c7d, -0.125rem 0.125rem 0rem #b94c7d, -0.1875rem 0.1875rem 0rem #b94c7d, -0.25rem 0.25rem 0rem #b94c7d, -0.3125rem 0.3125rem 0rem #b94c7d;
+}
+
+.MegaMenu {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+.MegaMenu-title {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 3.125rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: -0.0625rem 0.0625rem 0rem #ffc3de, -0.125rem 0.125rem 0rem #ffc3de, -0.1875rem 0.1875rem 0rem #ffc3de, -0.25rem 0.25rem 0rem #ffc3de, -0.3125rem 0.3125rem 0rem #ffc3de;
+}
+.MegaMenu-separator {
+  height: 65%;
+  width: 0.125rem;
+  background: rgba(255, 255, 255, 0.4588235294);
+}
+.MegaMenu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.25rem;
+}
+.MegaMenu-item {
+  width: 9.375rem;
+  height: 9.375rem;
+  background-color: #e6c7b6;
+  border-radius: 50%;
+}
+.MegaMenu-link {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MegaMenu-decoration {
+  margin-top: 0.625rem;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  font-size: 2.1875rem;
+  text-transform: uppercase;
+  font-family: var(--heading-font);
+  color: #ffffff;
+  line-height: 1;
+  transform: rotate(-3deg);
+  text-shadow: -0.0625rem 0.0625rem 0rem #5b83d6, -0.125rem 0.125rem 0rem #5b83d6, -0.1875rem 0.1875rem 0rem #5b83d6, -0.25rem 0.25rem 0rem #5b83d6, -0.3125rem 0.3125rem 0rem #5b83d6;
+}
+.MegaMenu-decoration::after {
+  content: attr(data-content);
+  font-size: 2.1875rem;
+  position: absolute;
+  top: 1%;
+  left: 0;
+  text-transform: uppercase;
+  width: 100%;
+  -webkit-text-stroke: 1.25rem #f797fc;
+  text-shadow: 0.5rem 0.125rem 0 #ffcc00, 0.3125rem 0.3125rem 0 #ffcc00;
+  z-index: -1;
+}/*# sourceMappingURL=menu.css.map */

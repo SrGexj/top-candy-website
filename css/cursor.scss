@@ -1,0 +1,48 @@
+.mf-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 250;
+    direction: ltr;
+    contain: layout style size;
+    pointer-events: none;
+    transition: opacity .3s, color .4s;
+    &::before {
+        background: #ffde00;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: -1.875rem;
+        left: -1.875rem;
+        display: block;
+        width: 3.75rem;
+        height: 3.75rem;
+        transform: scale(0.3);
+        border-radius: 50%;
+        transition: transform .25s ease-in-out, opacity .1s;
+    }
+}
+.mf-cursor.-pointer::before{
+    transform: scale(1);
+    background: rgba($color: #ffe9c0, $alpha: .8);
+    border: solid .125rem #d68b00;
+}
+.mf-cursor.-pointer.-text{
+    color: #fff;
+}
+
+.mf-cursor.-overdive::before, .mf-cursor.-product::before{
+    transform: scale(1.75);
+}
+
+.mf-cursor-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ff8a00;
+    font-size: 120%;
+    text-transform: uppercase;
+    font-weight: 900;
+}

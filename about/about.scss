@@ -1,0 +1,223 @@
+@import '../_reset.scss';
+@import '../css/footer.scss';
+@import '../css/header.scss';
+@import '../css/menu.scss';
+@import '../css/responsive.scss';
+
+:root {
+    --heading-font: 'Bubbly Soda', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --text-font: 'Quicksand', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --light-title-primary: #ffe9c0;
+    --text-secondary-shadow: #ed8229;
+    --dark-primary: #71335c;
+    --border-radius: 30px;
+    --tablet-title-size: 96px;
+    --tablet-title-extra: 160px;
+    --mobile-title-size: 24px;
+    --mobile-title-extra: 60px;
+    line-height: normal;
+}
+
+body{
+    background: #eff6e7;
+}
+
+.HeroSection{
+    height: 90vh;
+    background:url(/images/bg-aboutSection.webp) no-repeat center ;
+    mask: url(/images/bg-aboutSection.webp) no-repeat center ;
+    mask-size: cover;
+    background-size: cover;
+ &-title{
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    &::after{
+        content: "una historia hecha";
+    }
+ }
+ @media (max-width:767px){
+        &-title{
+            font-size: 2.5rem;
+            &::after{
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+.SplittedWords-multicolor{
+    color: #fa84fb;
+    &::after{
+        top: 0% ;
+        content: "caramelo";
+    }
+    @media (max-width:767px){
+        font-size: 5.25rem;
+        &::after{
+            font-size: 5.25rem;
+        }
+    }
+}
+.About{
+    width: 100%;
+    height: 100%;
+    padding: 85px 0 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-wrapper{
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 65px;
+    }
+    &-col{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        &--one{
+            .About-text{
+                max-width: 87%;
+            }
+        }
+        &--two{
+            flex-direction: row-reverse;
+            .About-imageWrapper{
+                &::after{
+                    transform: rotate(-2deg);
+                }
+            }
+        }
+    }
+    &-info{
+        width: 50%;
+    }
+    &-imageWrapper{
+        position: relative;
+        width: 50%;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #20374235;
+            transform: rotate(2deg);
+            border-radius: 30px;
+        }
+    }
+    &-image{
+        position: relative;
+        border-radius: 30px;
+        z-index: 1;
+    }
+    &-title{
+        position: relative;
+        font-size: 3.75rem;
+        font-family: var(--heading-font);
+        color: #ff923a;
+        text-transform: uppercase;
+        z-index: 1;
+        margin-bottom: 30px;
+        &::after{
+            content: "Nuestra historia";
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-text-stroke: 16px #694a30;
+            z-index: -1;
+            text-shadow: 3px 1px 0px #694a30;
+        }
+
+        &--second{
+            color: #3ac0ff;
+            &::after{
+                content: "expansion global";
+                -webkit-text-stroke-color: #203742;
+                text-shadow: 7px 1px 0px #203742;
+            }
+        }
+    }
+    &-text{
+        font-size: 1.25rem;
+        font-family: var(--text-font);
+        color: var(--dark-primary);
+    }
+    @media (max-width:767px){
+        padding: 50px 0;
+        &-wrapper{
+            width: 100%;
+            gap: 100px;   
+        }
+        &-col{
+            flex-direction: column;
+            gap: 30px;
+            &--one{
+                .About-text{
+                    max-width: 100%;
+                }
+            }
+        }
+        &-title{
+            font-size: 2.55rem;
+            &::after{
+                text-shadow: 7px 0px 0px #694a30;
+            }
+            &--second{
+                &::after{
+                    text-shadow: 7px 1px 0px #203742;
+                }
+            }
+        }
+        &-info{
+            width: 100%;
+        }
+        &-imageWrapper{
+            width: 100%;
+        }
+    }
+}
+.Contact{
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 0;
+    &-title{
+        position: relative;
+        color: #e2bd0e;
+        text-shadow: none;
+        z-index: 1;
+        &::after{
+            content: "¿Alguna duda?";
+            position: absolute;
+            left: 0;
+            top: 0;
+            -webkit-text-stroke: 16px #6f5f12;
+            text-shadow: 3px 1px 0px #6f5f12;
+            z-index: -1;
+        }
+    }
+    &-button{  
+        border-radius: 30px;
+        padding: 13px 30px;
+        background: #f2eac6;
+        box-shadow: -0.3125rem 0.3125rem 0rem #948127;
+    }
+    @media (max-width:767px){
+        &-title{
+            font-size: 3.25rem;
+            &::after{
+                font-size: 3.25rem;
+                text-shadow: 7px 0px 0px #6f5f12;
+            }
+        }        
+    }
+}
